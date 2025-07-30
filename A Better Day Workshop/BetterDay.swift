@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
-struct A_Better_Day_WorkshopApp: App {
+struct BetterDay: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .modelContainer(for: [Day.self, Thing.self])
         }
     }
 }
